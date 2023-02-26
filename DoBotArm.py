@@ -117,7 +117,7 @@ class DoBotArm:
         self.griping = state
         cmdIndex = dType.SetEndEffectorGripper(self.api, True, state, isQueued = 0)[0]
         self.waitCommand(cmdIndex)
-        dType.dSleep(200)
+        dType.dSleep(500)
         self.setSuction(False)
 #============================================================================
     def toggleSuction(self):
