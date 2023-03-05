@@ -48,6 +48,7 @@ def manualMode():
 def autoMode():
     homeX, homeY, homeZ = 250, 0, 50
     dobot = Dbt.DoBotArm(homeX, homeY, homeZ)
+    dobot.moveMotor()
     dobot.goPick((250, 50, -30), (150, 100, -30))
     # dobot.setGrip(False)
     # dobot.pick(-35)
@@ -59,6 +60,7 @@ def autoMode():
 #--Main Program--
 def main():
     # manualMode()
+
     autoMode()
 
 main()

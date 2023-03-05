@@ -10,8 +10,8 @@ import DobotDllType as dType
 def main():
     #api object to access the API functions
     api = dType.load()
-    #establish connection with one dobot on specific COM port
-    state = dType.ConnectDobot(api, "COM3", 115200)
+    #establish connetion with one dobot on specific COM port
+    state = dType.ConnectDobot(api, "COM4", 115200)
     if state == 0:
         print("Successfully connected to the Dobot Magician robot")
     else:

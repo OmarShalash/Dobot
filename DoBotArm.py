@@ -73,10 +73,6 @@ class DoBotArm:
 
     #Returns to home location and then disconnects
     def dobotDisconnect(self):
-        self.moveHome()
-        dType.DisconnectDobot(self.api)
-
-    #Delays commands
     def waitCommand(self, cmdIndex):
         dType.SetQueuedCmdStartExec(self.api)
         while cmdIndex > dType.GetQueuedCmdCurrentIndex(self.api)[0]:
@@ -131,3 +127,6 @@ class DoBotArm:
 #============================================================================
     def getPos(self):
         return dType.GetPose(self.api)
+
+    def moveMotor(self):
+        dType.SetEMotor(self.api, 0, 1, 50, 0)
