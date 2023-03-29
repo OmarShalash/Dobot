@@ -73,6 +73,7 @@ class DoBotArm:
 
     #Returns to home location and then disconnects
     def dobotDisconnect(self):
+      return
     def waitCommand(self, cmdIndex):
         dType.SetQueuedCmdStartExec(self.api)
         while cmdIndex > dType.GetQueuedCmdCurrentIndex(self.api)[0]:
